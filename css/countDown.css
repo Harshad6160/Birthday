@@ -1,0 +1,83 @@
+/* Add this to your existing CSS file */
+#countdown-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a3b 0%, #0d0d2b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown h1 {
+    color: #ffffff;
+    font-size: 3em;
+    margin-bottom: 50px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.countdown-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 120px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-num {
+    color: #ffffff;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.countdown-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* Make countdown responsive */
+@media (max-width: 768px) {
+    .countdown-boxes {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .countdown-box {
+        min-width: 100px;
+        padding: 15px;
+    }
+
+    .countdown h1 {
+        font-size: 2em;
+    }
+
+    .countdown-num {
+        font-size: 2.5em;
+    }
+
+    .countdown-label {
+        font-size: 1em;
+    }
+}
+
+/* Hide the original content initially */
+.merrywrap {
+    display: none;
+}
